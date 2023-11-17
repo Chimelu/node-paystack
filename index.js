@@ -14,7 +14,9 @@ app.use(cors());
 app.use(express.json());
 
 
-
+app.get('/',(req,res)=>{
+    res.send('welcome home This is an API link you can check it out on postman')
+  })
 app.use("/users",require('./routes/userRoutes'))
 app.use("/plans",require('./routes/planRoutes'))
 
